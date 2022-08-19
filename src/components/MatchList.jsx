@@ -6,6 +6,7 @@ import { useQuery } from '@apollo/react-hooks';
 import ErrorIcon from '@material-ui/icons/Error';
 
 import { GET_ALL_MATCHES } from '../graphql/queries';
+import TennisMatch from './TennisMatch';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -37,6 +38,7 @@ function MatchList() {
             <p>{match.p1.name}</p>
             <p>{match.p2.name}</p>
             <p>Match date: {match.started_at}</p>
+            <TennisMatch match={match} />
             <hr />
           </article>
         ))}
