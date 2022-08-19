@@ -1,10 +1,15 @@
-import gql from "graphql-tag";
+import gql from 'graphql-tag';
 
 export const GET_ALL_MATCHES = gql`
-  query AllMatches {
+  query MyQuery {
     matches {
+      p1 {
+        name
+      }
+      p2 {
+        name
+      }
       id
-      started_at
     }
   }
 `;
